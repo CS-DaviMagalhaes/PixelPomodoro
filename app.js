@@ -1,29 +1,33 @@
-//todo: block start button when timer has started or make stop button
-//todo: add reset button
-//todo: user input for custom time (max 1hr)
+let startButton = document.querySelector(".btn-start") 
+let secondsDiv = document.querySelector(".seconds")
+let minutesDiv = document.querySelector(".minutes")
+const totalSecondsReset = parseInt(minutesDiv.textContent) * 60
 
-let minutes = document.querySelector(".minutes")
-let seconds = document.querySelector(".seconds")
-
-let startButton = document.querySelector(".btn-start") //searching for class
-    
+let state = true
+let myInterval
 startButton.addEventListener("click", function(){
 
-    let minutesInt = parseInt(minutes.textContent) //convert str to int
-    let secondsInt = parseInt(seconds.textContent)
+    if(state) {
+        state = false
+        let totalSeconds = parseInt(minutesDiv.textContent) * 60
 
-    function countdown() {
-        if (minutesInt > 0 || secondsInt > 0 ){
-            if (secondsInt % 60 === 0){
-                secondsInt = 59
-                minutesInt -= 1
+        function countdown() {
+            if (totalSeconds>0){
+                totalSeconds--
+                let currentSeconds = totalSeconds % 60
+
+                secondsDiv.textContent = currentSeconds < 10 ? "0" + String(currentSeconds) : String(currentSeconds)
+                minutesDiv.textContent = String(Math.floor(totalSeconds / 60))     
             }else{
-                secondsInt -= 1
-            }
-            seconds.textContent = String(secondsInt)
-            minutes.textContent = String(minutesInt)
+                clearInterval(myInterval);
+                totalSeconds = totalSecondsReset
+                minutesDiv.textContent = String(Math.floor(totalSeconds / 60))  
+                state = true
+            }  
         }
-        setTimeout(countdown,1000)
+        myInterval = setInterval(countdown, 1000);
+    }else{
+        alert("Timer has already started")
     }
-    countdown()
+
 })
