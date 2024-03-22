@@ -2,9 +2,13 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Public Pixel', sans-serif;                                         
     font-size: 20px;
     letter-spacing: 0.8px;
+
+}
+body{
+    margin-top: 18vh;
 }
 
 video#video-bg {
@@ -17,31 +21,35 @@ video#video-bg {
     z-index: -1;
 }
 h1 {
-  margin: 0 auto 10px auto;
-  color: #746c98;
+    margin: 0 auto 10px auto;
+    color: #746c98;
+    font-size: 20px;
 }
 
 p {
-  margin: 0;
+    margin: 0;
 }
 
 .app-message {
-  height: 20px;
-  margin: 10px auto 20px auto;
-  color: #405775;
+    height: 20px;
+    margin: 10px auto 20px auto;
+    color: #405775;
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
 .app-container {
-  width: 250px;
-  height: 420px;
-  margin: 40px auto;
-  text-align: center;
-  border-radius: 5px;
-  padding: 20px;
+    width: 250px;
+    height: 420px;
+    margin: 60px auto;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
 }
 .app-circle {
     position: relative;
     margin: 0 auto;
+    top: 10px;
     width: 200px;
     height: 200px;
 }
@@ -85,16 +93,18 @@ p {
     border-color: #b696be;
 }
 .app-counter-box {
-    font-family: 'Droid Sans Mono', monospace;
-    font-size: 250%;
+    font-family: 'Public Pixel', sans-serif;    
+    font-size: 150%;
     position: relative;
-    top: 50px;
+    top: 70px;
     color: #746c98;
+    
 }
   
 button {
     position: relative;
-    top: 50px;
+    font-family: 'Public Pixel', sans-serif;    
+    top: 80px;
     font-size: 80%;
     text-transform: uppercase;
     letter-spacing: 1px;
