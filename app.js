@@ -43,4 +43,6 @@ function updateDisplay(totalSeconds) {
     let currentSeconds = totalSeconds % 60;
     secondsDiv.textContent = currentSeconds < 10 ? "0" + String(currentSeconds) : String(currentSeconds);
     minutesDiv.textContent = String(Math.floor(totalSeconds / 60));
+    const title = document.getElementById("timer-title")
+    title.innerText = `${minutesDiv.textContent}:${secondsDiv.textContent}`;
 }
