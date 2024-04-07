@@ -118,3 +118,24 @@ button:hover {
     color: #354860;
 }
   
+.git-profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 7vh;
+}
+
+.git-user {
+    font-size: 1.5vh;
+    margin: 5px;
+    color: #fce6f4;
+    text-decoration: none;
+}
+.git-user:hover{
+    color: #fcccec;
+}
+
+.git-profile img {
+    width: 3vh;
+    height: 3vh;
+}
