@@ -1,8 +1,8 @@
-# Pomodoro app
+# PixelPomodoro
 
-[Pomodoro app website](https://pomodoro-app-git-main-cs-davimagalhaes-projects.vercel.app)
+[Pomodoro app website](pixelpomodoro.vercel.app)
 
-A simple pomodoro app using pure html/JS/css. Made for the final project for the Codédex JS course. 
+A simple pomodoro app using pure html/JS/css. A mini project that I made to practice my basic JS, that I learned on codédex.
 ![Pomodoro app](https://github.com/CS-DaviMagalhaes/PomodoroApp/blob/main/imgs/app_screenshot.png?raw=true)
 
 Deployed using Vercel
